@@ -3,7 +3,7 @@ PacletObject[
     "Name" -> "AntonAntonov/SoftwareDesignMethodsWithWLBook",
     "Description" -> "The book \"Software Design Methods with Wolfram Language\" as a paclet",
     "Creator" -> "Anton Antonov",
-    "Version" -> "1.0.0",
+    "Version" -> "0.0.8",
     "WolframVersion" -> "12.1+",
     "PublisherID" -> "AntonAntonov",
     "License" -> "MIT",

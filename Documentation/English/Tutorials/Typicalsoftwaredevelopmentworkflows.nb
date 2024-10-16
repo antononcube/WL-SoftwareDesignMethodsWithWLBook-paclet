@@ -1,0 +1,3179 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     74556,       3171]
+NotebookOptionsPosition[     51055,       2738]
+NotebookOutlinePosition[     51608,       2756]
+CellTagsIndexPosition[     51565,       2753]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Typical software development workflows", "Title",
+ CellID->87737001,ExpressionUUID->"25f41b13-4f40-42a2-9ae6-abe4c8769b1e"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellID->684440745,ExpressionUUID->"9cb49501-4702-48b4-b0d4-bf2ec6657666"],
+
+Cell["\<\
+Different programming approaches are described in this chapter. More \
+comprehensive and detailed information can be found in the references.\
+\>", "Text",
+ CellID->1473187883,ExpressionUUID->"d897ae3e-1555-4abb-96ea-588cb76c6ad3"],
+
+Cell["\<\
+The summaries are intended to provide a sufficient understanding of each \
+programming paradigm or method.\
+\>", "Text",
+ CellID->1529783318,ExpressionUUID->"dc501fea-84d9-4950-9fb4-9ed4a8c2b3e9"],
+
+Cell["\<\
+An LLM prompt is included in each section to generate step-by-step \
+instructions for the corresponding programming type.\
+\>", "Text",
+ CellID->1394003742,ExpressionUUID->"092407e2-9c78-42ea-86ff-f6db495d1c44"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Top-down Structural programming", "Section",
+ CellID->2121786671,ExpressionUUID->"6e3b14c5-5651-43e8-9707-e9b121c21af4"],
+
+Cell[CellGroupData[{
+
+Cell["Summary", "Subsection",
+ CellID->1902621062,ExpressionUUID->"e2dc9b3d-8fa7-4ba9-b897-87cf956ae81c"],
+
+Cell["\<\
+The top-down development approach in structured programming involves \
+systematically breaking down a problem into smaller modules for clarity and \
+maintainability. It starts with problem definition, followed by high-level \
+system design and modular decomposition, where the system is divided into \
+manageable components. Each module is specified in detail before designing \
+algorithms using structured principles. The modules are then implemented in \
+code, tested individually, and progressively integrated. The system undergoes \
+comprehensive testing to meet original requirements. Documentation is \
+maintained throughout, and maintenance plans ensure future updates are \
+manageable. The process concludes with reviewing and optimizing the system \
+for improvements.\
+\>", "Text",
+ CellID->1320685204,ExpressionUUID->"789e743d-f39e-4b5b-b094-337f2f6e2eb9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["LLM prompt", "Subsection",
+ CellID->365248236,ExpressionUUID->"bae1f06b-1a3a-49a6-8e03-ec66cd85d3ec"],
+
+Cell["\<\
+Here is an LLM prompt to generate step-by-step descriptions like the one \
+below:\
+\>", "Text",
+ CellID->1218839326,ExpressionUUID->"cf654513-c049-48a7-a672-553a3ce35733"],
+
+Cell["\<\
+Write down the steps of Top-down development as prescribed in Structural \
+Programming.\
+\>", "ItemParagraph",
+ Background->GrayLevel[0.97],
+ CellID->186043349,ExpressionUUID->"daaf069b-4b7c-4201-8a7d-66baec6e6a94"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Step by step", "Subsection",
+ CellID->94376611,ExpressionUUID->"e5b681c0-3e3c-4ccc-b03f-066026a62a46"],
+
+Cell["Steps of Top-Down Development in Structured Programming:", "Text",
+ FontWeight->"Bold",
+ CellID->1344769591,ExpressionUUID->"13f4acc5-07e2-4aac-8292-6e54a4fc89f9"],
+
+Cell[TextData[StyleBox["Problem Definition:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1424614909,ExpressionUUID->"9b2dac66-f4fd-4829-a6d1-01712f12233e"],
+
+Cell["Clearly define the overall problem or task to be solved.", "Subitem",
+ CellID->1207595160,ExpressionUUID->"6d362068-69a7-496b-8e2a-c2c43c175e04"],
+
+Cell["\<\
+Identify the objectives, requirements, and constraints of the system.\
+\>", "Subitem",
+ CellID->183906323,ExpressionUUID->"2e7207c9-0bda-467a-a686-45ace757d3f3"],
+
+Cell[TextData[StyleBox["High-Level System Design:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->684602628,ExpressionUUID->"5db796b7-51d0-4547-8588-4bdb32c6c130"],
+
+Cell["Develop a high-level overview of the system.", "Subitem",
+ CellID->2046471817,ExpressionUUID->"efd1b722-7482-4bc9-8b48-7605ff3f3aec"],
+
+Cell["\<\
+Identify the main functionalities, components, or modules needed.\
+\>", "Subitem",
+ CellID->953737967,ExpressionUUID->"14c09218-d6c8-4377-9447-6102db38be13"],
+
+Cell["\<\
+Decide on the overall architecture and how components will interact.\
+\>", "Subitem",
+ CellID->656070161,ExpressionUUID->"c05441a3-4c58-4e31-8604-21594d7f7116"],
+
+Cell[TextData[StyleBox["Modular Decomposition:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1390152229,ExpressionUUID->"f50b828d-18f7-4616-91e2-c14cf32855a5"],
+
+Cell["\<\
+Break down the system into smaller, manageable modules or sub-problems.\
+\>", "Subitem",
+ CellID->1813917090,ExpressionUUID->"ed235ccb-0f41-4ac0-b163-a216becd454e"],
+
+Cell["\<\
+Organize modules in a hierarchical structure from the most general to the \
+most specific.\
+\>", "Subitem",
+ CellID->826678818,ExpressionUUID->"23658ae5-f7c8-450a-adc7-de68b4fd7b4a"],
+
+Cell["\<\
+Ensure each module has a single, well-defined responsibility.\
+\>", "Subitem",
+ CellID->1919181683,ExpressionUUID->"ea285ed7-bac6-479a-949c-2c2aacfe813b"],
+
+Cell[TextData[StyleBox["Module Specification:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->482168241,ExpressionUUID->"20e8a638-3a37-4b1c-a475-dfbd8445bd36"],
+
+Cell["For each module, write detailed specifications including:", "Subitem",
+ CellID->1345826356,ExpressionUUID->"431b918c-c6e7-4ac5-85cf-4d6d0aa38c3f"],
+
+Cell["Purpose and functionality.", "Subsubitem",
+ CellID->2005795088,ExpressionUUID->"95cc9b82-e45e-4d62-8968-843eb24709f1"],
+
+Cell["Inputs and outputs.", "Subsubitem",
+ CellID->199753410,ExpressionUUID->"360ea5a8-7597-46bc-a2c1-73766d3415fa"],
+
+Cell["Preconditions and postconditions.", "Subsubitem",
+ CellID->738621609,ExpressionUUID->"c06df405-2784-41d1-b15a-dd374ceea085"],
+
+Cell["Define interfaces between modules.", "Subitem",
+ CellID->1557902803,ExpressionUUID->"c63e955c-8380-49da-8cf5-7bae6ae26d58"],
+
+Cell[TextData[StyleBox["Algorithm Design for Modules:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1551785797,ExpressionUUID->"c47da26c-01c8-4fb8-ba68-96cf830e7d70"],
+
+Cell["\<\
+Develop algorithms or step-by-step procedures for each module.\
+\>", "Subitem",
+ CellID->1822481011,ExpressionUUID->"e2f8a42e-123d-4910-9e98-adc8ff646fbc"],
+
+Cell["\<\
+Use pseudocode or flowcharts to outline logic and control flow.\
+\>", "Subitem",
+ CellID->879094716,ExpressionUUID->"7075f7a8-2087-4613-9c70-7750b8d14403"],
+
+Cell["\<\
+Ensure algorithms adhere to structured programming principles (sequence, \
+selection, iteration).\
+\>", "Subitem",
+ CellID->257400452,ExpressionUUID->"3fff5b9f-8949-44e9-b00d-7175f465ec34"],
+
+Cell[TextData[StyleBox["Implementation of Modules:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1097331706,ExpressionUUID->"0a322c32-b8b8-4d80-a439-43d9b2b017e4"],
+
+Cell["Translate algorithms into actual code for each module.", "Subitem",
+ CellID->264422306,ExpressionUUID->"53a97eca-8d79-4a08-b37b-614b6a93a322"],
+
+Cell[TextData[{
+ "Use",
+ " ",
+ "structured",
+ " ",
+ "programming",
+ " ",
+ "constructs",
+ " ",
+ "(e.g.,",
+ " ",
+ "loops,",
+ " ",
+ "conditionals)",
+ " ",
+ "and",
+ " ",
+ "avoid",
+ " ",
+ "unstructured",
+ " ",
+ "elements",
+ " ",
+ "like",
+ " ",
+ StyleBox["goto", "Program"],
+ " ",
+ "statements."
+}], "Subitem",
+ CellID->1002031299,ExpressionUUID->"8b7de689-ea4e-483f-8da7-05ec32ddf782"],
+
+Cell["Write code that is clear, readable, and maintainable.", "Subitem",
+ CellID->573282519,ExpressionUUID->"acd5610f-3b68-4cfd-aae7-05367d6771d1"],
+
+Cell[TextData[StyleBox["Unit Testing of Modules:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1547656391,ExpressionUUID->"2e8fb55d-0a3f-4bb6-9023-34dfd19ebfbe"],
+
+Cell["Test each module individually to verify correctness.", "Subitem",
+ CellID->1139031073,ExpressionUUID->"0e3a7328-537e-40f0-8749-5269b9d427ff"],
+
+Cell["\<\
+Use test cases that cover normal, boundary, and error conditions.\
+\>", "Subitem",
+ CellID->1026014553,ExpressionUUID->"2bbb55b9-d83d-4a74-af55-da0426488198"],
+
+Cell["Debug and fix issues within modules before integration.", "Subitem",
+ CellID->2080390508,ExpressionUUID->"18bed4a0-0530-4be9-b52b-c17f58020849"],
+
+Cell[TextData[StyleBox["Progressive Integration:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1942011149,ExpressionUUID->"89359839-514c-437f-b6b1-e5223a722c10"],
+
+Cell["\<\
+Combine modules progressively, starting from lower-level modules up to \
+higher-level ones.\
+\>", "Subitem",
+ CellID->1924914137,ExpressionUUID->"87afad0b-2782-4c77-b814-8e57682b6b5a"],
+
+Cell["\<\
+Test interactions between integrated modules to ensure they work together \
+correctly.\
+\>", "Subitem",
+ CellID->190758504,ExpressionUUID->"bb3de747-ce83-4314-9e7f-cdb88f89eaaa"],
+
+Cell["Resolve any interface issues or integration bugs.", "Subitem",
+ CellID->2032575404,ExpressionUUID->"f69c33c3-061d-4229-b92a-d0c0cf3faa5f"],
+
+Cell[TextData[StyleBox["System Testing:",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1472442199,ExpressionUUID->"4a1bd84a-e02b-4951-802b-0799ed7c53db"],
+
+Cell["\<\
+Test the integrated system as a whole against the original requirements.\
+\>", "Subitem",
+ CellID->1881974212,ExpressionUUID->"63f0fb8c-8d0f-4557-a518-0dd978fba1ee"],
+
+Cell["\<\
+Perform functional testing, performance testing, and other relevant types.\
+\>", "Subitem",
+ CellID->53944421,ExpressionUUID->"2341cd2d-4291-4366-9c50-da4104e37126"],
+
+Cell["\<\
+Ensure the system meets all specified objectives and behaves as expected.\
+\>", "Subitem",
+ CellID->405784713,ExpressionUUID->"f59fec77-2fdd-484f-b292-519d49029336"],
+
+Cell[TextData[{
+ "10.",
+ " ",
+ StyleBox["Documentation:",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->1763092166,ExpressionUUID->"6a72b7e8-c7b5-4a09-bd88-f017c7678fba"],
+
+Cell["Document each stage thoroughly, including:", "Subitem",
+ CellID->1310672656,ExpressionUUID->"1a85b1ee-0273-4437-b7b3-1f64dfd255cb"],
+
+Cell["Design decisions and rationale.", "Subsubitem",
+ CellID->1735562113,ExpressionUUID->"50872b0d-d38d-47a5-9c3f-e3eb34c89851"],
+
+Cell["Module specifications and algorithms.", "Subsubitem",
+ CellID->322055990,ExpressionUUID->"6c7400d1-0b9c-4fbf-adf2-2e0c096ee4ea"],
+
+Cell["Code comments and explanations.", "Subsubitem",
+ CellID->1136233490,ExpressionUUID->"09752f3b-3281-4bc5-b6d4-3756504212ff"],
+
+Cell["Test plans, test cases, and results.", "Subsubitem",
+ CellID->1251677306,ExpressionUUID->"b8d7e5f9-32d3-44e1-8af9-08600f9d23bf"],
+
+Cell["Provide user manuals or guides if necessary.", "Subitem",
+ CellID->190675930,ExpressionUUID->"d7828d78-7332-4039-b042-053b1d6eb505"],
+
+Cell[TextData[{
+ "11.",
+ " ",
+ StyleBox["Maintenance Planning:",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->644754186,ExpressionUUID->"02629fd6-a4cd-4444-a994-36eaa183add5"],
+
+Cell["\<\
+Plan for future maintenance by ensuring code is modular and documentation is \
+clear.\
+\>", "Subitem",
+ CellID->181121340,ExpressionUUID->"8bd858c9-f890-4033-91ee-40a4ddb71f88"],
+
+Cell["\<\
+Establish procedures for handling updates, bug fixes, and enhancements.\
+\>", "Subitem",
+ CellID->1122033581,ExpressionUUID->"7b538a21-b949-442d-b17b-a6deebd2be50"],
+
+Cell[TextData[{
+ "12.",
+ " ",
+ StyleBox["Review and Optimization:",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->964491560,ExpressionUUID->"a2b9255d-43eb-462c-90d2-6259ccbb619f"],
+
+Cell["Review the entire system for potential improvements.", "Subitem",
+ CellID->1003081364,ExpressionUUID->"80aec63d-7539-458f-a790-55582963e0d3"],
+
+Cell["Optimize code for efficiency where appropriate.", "Subitem",
+ CellID->1041855798,ExpressionUUID->"104a4461-18e9-4ebd-a5a1-4e34e8876fd5"],
+
+Cell["\<\
+Refactor modules to improve structure and readability without altering \
+functionality.\
+\>", "Subitem",
+ CellID->2036222995,ExpressionUUID->"97c5a375-ae67-4d0d-8d5e-2500114a4646"],
+
+Cell["\<\
+By following these steps, developers can systematically design, implement, \
+and test software systems in a way that emphasizes clarity, modularity, and \
+maintainability, adhering to the principles of structured programming.\
+\>", "Text",
+ CellID->500478373,ExpressionUUID->"6ac1533f-dc3e-4156-853a-9ddd1f345cd2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Using Design Patterns (Object-Oriented Programming)", "Section",
+ CellID->1994053359,ExpressionUUID->"079a0f11-70ab-457c-9d0c-fb32cc3e3ad2"],
+
+Cell[CellGroupData[{
+
+Cell["Summary", "Subsection",
+ CellID->425009631,ExpressionUUID->"5674009a-5bb0-4490-9de5-7ae217b5e25f"],
+
+Cell["\<\
+Object-Oriented Programming (OOP) development using design patterns involves \
+gathering requirements, analyzing the system, and identifying classes at \
+different abstraction levels. Design patterns are then applied to address \
+common design problems, followed by defining the system architecture and \
+modeling relationships. Detailed design focuses on class internals and \
+interactions, leading to implementation using coding standards and \
+integrating design patterns. Testing ensures the system meets requirements, \
+while deployment involves preparing the environment and training users. \
+Ongoing maintenance includes performance monitoring, bug fixes, and iterative \
+refinement for evolving requirements.\
+\>", "Text",
+ CellID->606258295,ExpressionUUID->"d299c5c1-546d-4e90-b650-1f0c3ec60d5c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["LLM prompt", "Subsection",
+ CellID->1720742697,ExpressionUUID->"5a93cc1f-638a-4b76-8253-ea1df6102cfa"],
+
+Cell["\<\
+Here is an LLM prompt to generate step-by-step descriptions like the one \
+below:\
+\>", "Text",
+ CellID->360234330,ExpressionUUID->"85697366-99e2-43e5-be23-a0cd382a3c7f"],
+
+Cell["\<\
+Write down the steps of Object-Oriented Programmgin (OOP) development using \
+Design Patterns. Make sure mention the step \"Discovery of classes.\" Also, \
+mention the types of classes: analysis, design, implemnetational.\
+\>", "ItemParagraph",
+ Background->GrayLevel[0.97],
+ CellID->701983417,ExpressionUUID->"c7a592a2-9b74-466e-b477-35b704283b49"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Step by step", "Subsection",
+ CellID->2107616548,ExpressionUUID->"2fd22626-afa2-400d-8cd9-e7a90687f8bc"],
+
+Cell["\<\
+The steps of Object-Oriented Programming (OOP) development using Design \
+Patterns are as follows:\
+\>", "Text",
+ CellID->2116048618,ExpressionUUID->"ed293aa5-ddc0-41b0-9d8e-5a874f660c00"],
+
+Cell[TextData[{
+ StyleBox["Requirements Gathering and Analysis",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->2099928406,ExpressionUUID->"98eabf01-1624-4c4a-9b74-5afd0d54d2d1"],
+
+Cell["\<\
+Collect and understand the functional and non-functional requirements of the \
+system.\
+\>", "Subitem",
+ CellID->1750464844,ExpressionUUID->"85055c1c-2a8e-4bba-bcf4-61e95861a9fe"],
+
+Cell["\<\
+Engage with stakeholders to capture use cases and user stories that define \
+what the system should do.\
+\>", "Subitem",
+ CellID->1684152855,ExpressionUUID->"e7dddec4-d767-43a3-96c0-6c61baba6347"],
+
+Cell[TextData[{
+ StyleBox["System Analysis",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->1722566525,ExpressionUUID->"c4715998-cf61-46d4-8afe-0b400ed05662"],
+
+Cell["\<\
+Analyze the gathered requirements to identify the key functionalities and \
+behaviors needed.\
+\>", "Subitem",
+ CellID->948540468,ExpressionUUID->"628b9667-7aea-493b-88bd-296fdc029373"],
+
+Cell["\<\
+Create models like use case diagrams to represent the interactions between \
+users and the system.\
+\>", "Subitem",
+ CellID->1348533995,ExpressionUUID->"e63d5d96-942f-4c1b-9dc4-a35ddc361be8"],
+
+Cell[TextData[{
+ StyleBox["Discovery of Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->268443527,ExpressionUUID->"71ccdac8-d816-41fb-9112-534283fef2da"],
+
+Cell[TextData[{
+ StyleBox["Identify Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Determine",
+ " ",
+ "the",
+ " ",
+ "classes",
+ " ",
+ "that",
+ " ",
+ "represent",
+ " ",
+ "entities",
+ " ",
+ "in",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "domain."
+}], "Subitem",
+ CellID->2014699589,ExpressionUUID->"f9206264-10a2-4f48-bad5-4148f060a38c"],
+
+Cell[TextData[{
+ StyleBox["Types of Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "Subitem",
+ CellID->1681330074,ExpressionUUID->"4ca4dc09-6619-4439-a474-4aaf687f8dd6"],
+
+Cell[TextData[{
+ StyleBox["Analysis Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "High-level",
+ " ",
+ "abstractions",
+ " ",
+ "derived",
+ " ",
+ "during",
+ " ",
+ "the",
+ " ",
+ "analysis",
+ " ",
+ "phase,",
+ " ",
+ "representing",
+ " ",
+ "real-world",
+ " ",
+ "concepts",
+ " ",
+ "(e.g.,",
+ " ",
+ "Customer,",
+ " ",
+ "Order)."
+}], "Subsubitem",
+ CellID->1524726492,ExpressionUUID->"1f34066e-5ac8-4b5d-b3d1-2003f53fd768"],
+
+Cell[TextData[{
+ StyleBox["Design Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Refined",
+ " ",
+ "from",
+ " ",
+ "analysis",
+ " ",
+ "classes",
+ " ",
+ "to",
+ " ",
+ "include",
+ " ",
+ "software",
+ " ",
+ "design",
+ " ",
+ "considerations,",
+ " ",
+ "focusing",
+ " ",
+ "on",
+ " ",
+ "how",
+ " ",
+ "the",
+ " ",
+ "system",
+ " ",
+ "will",
+ " ",
+ "be",
+ " ",
+ "structured",
+ " ",
+ "(e.g.,",
+ " ",
+ "DataAccessObject,",
+ " ",
+ "Controller)."
+}], "Subsubitem",
+ CellID->155791393,ExpressionUUID->"aa079827-73b0-4d77-b843-bfe3df70c96a"],
+
+Cell[TextData[{
+ StyleBox["Implementational Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Detailed",
+ " ",
+ "classes",
+ " ",
+ "ready",
+ " ",
+ "for",
+ " ",
+ "coding,",
+ " ",
+ "including",
+ " ",
+ "all",
+ " ",
+ "attributes",
+ " ",
+ "and",
+ " ",
+ "methods",
+ " ",
+ "necessary",
+ " ",
+ "for",
+ " ",
+ "implementation",
+ " ",
+ "(e.g.,",
+ " ",
+ "MySQLCustomerDAO,",
+ " ",
+ "OrderController)."
+}], "Subsubitem",
+ CellID->603376458,ExpressionUUID->"0044cb43-e77d-4380-8438-8282b031c8de"],
+
+Cell[TextData[{
+ StyleBox["Apply Design Patterns",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->530348472,ExpressionUUID->"981aaeef-5b8c-44cc-bfd6-612e23f4ad46"],
+
+Cell[TextData[{
+ StyleBox["Select Appropriate Patterns",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Choose",
+ " ",
+ "design",
+ " ",
+ "patterns",
+ " ",
+ "that",
+ " ",
+ "solve",
+ " ",
+ "common",
+ " ",
+ "design",
+ " ",
+ "problems",
+ " ",
+ "relevant",
+ " ",
+ "to",
+ " ",
+ "the",
+ " ",
+ "system",
+ " ",
+ "(e.g.,",
+ " ",
+ "Singleton,",
+ " ",
+ "Observer,",
+ " ",
+ "Factory)."
+}], "Subitem",
+ CellID->1509633854,ExpressionUUID->"78de12c7-92fc-4874-ab89-1fd221f68095"],
+
+Cell[TextData[{
+ StyleBox["Integrate Patterns",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Incorporate",
+ " ",
+ "the",
+ " ",
+ "chosen",
+ " ",
+ "patterns",
+ " ",
+ "into",
+ " ",
+ "the",
+ " ",
+ "class",
+ " ",
+ "design",
+ " ",
+ "to",
+ " ",
+ "improve",
+ " ",
+ "scalability,",
+ " ",
+ "maintainability,",
+ " ",
+ "and",
+ " ",
+ "code",
+ " ",
+ "reuse."
+}], "Subitem",
+ CellID->2044378520,ExpressionUUID->"f88ba0bc-72f9-4c87-8be5-582d0b5a8b81"],
+
+Cell[TextData[{
+ StyleBox["System Design and Architecture",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->131433640,ExpressionUUID->"3fd22497-1405-479c-a21e-1eefbdf62e62"],
+
+Cell[TextData[{
+ StyleBox["Define Architecture",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Establish",
+ " ",
+ "the",
+ " ",
+ "overall",
+ " ",
+ "structure",
+ " ",
+ "of",
+ " ",
+ "the",
+ " ",
+ "system,",
+ " ",
+ "including",
+ " ",
+ "layers",
+ " ",
+ "and",
+ " ",
+ "subsystems."
+}], "Subitem",
+ CellID->1391998364,ExpressionUUID->"ae861edd-42e1-405c-9caf-21263bcb9031"],
+
+Cell[TextData[{
+ StyleBox["Model Relationships",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Use",
+ " ",
+ "class",
+ " ",
+ "diagrams",
+ " ",
+ "to",
+ " ",
+ "model",
+ " ",
+ "associations,",
+ " ",
+ "inheritances,",
+ " ",
+ "and",
+ " ",
+ "dependencies",
+ " ",
+ "between",
+ " ",
+ "classes."
+}], "Subitem",
+ CellID->629653330,ExpressionUUID->"b07afd2f-55f9-4fd3-a344-b9c08ee475ea"],
+
+Cell[TextData[{
+ StyleBox["Define Interfaces and Abstract Classes",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Specify",
+ " ",
+ "interfaces",
+ " ",
+ "and",
+ " ",
+ "abstract",
+ " ",
+ "classes",
+ " ",
+ "to",
+ " ",
+ "enforce",
+ " ",
+ "contracts",
+ " ",
+ "and",
+ " ",
+ "promote",
+ " ",
+ "polymorphism."
+}], "Subitem",
+ CellID->1931588541,ExpressionUUID->"2548cb80-930a-4697-91e3-f1a43bfdb3fc"],
+
+Cell[TextData[{
+ StyleBox["Detailed Design and Modeling",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->698316888,ExpressionUUID->"fb9b3cf1-6088-469f-b2b8-91d58ae9a78c"],
+
+Cell[TextData[{
+ StyleBox["Design Class Internals",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Detail",
+ " ",
+ "the",
+ " ",
+ "attributes,",
+ " ",
+ "methods,",
+ " ",
+ "and",
+ " ",
+ "inner",
+ " ",
+ "workings",
+ " ",
+ "of",
+ " ",
+ "each",
+ " ",
+ "class."
+}], "Subitem",
+ CellID->613805761,ExpressionUUID->"67f6c3c4-8b35-4482-99d3-68dd6885adb0"],
+
+Cell[TextData[{
+ StyleBox["Sequence and Collaboration Diagrams",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Model",
+ " ",
+ "the",
+ " ",
+ "interactions",
+ " ",
+ "between",
+ " ",
+ "objects",
+ " ",
+ "over",
+ " ",
+ "time",
+ " ",
+ "to",
+ " ",
+ "fulfill",
+ " ",
+ "specific",
+ " ",
+ "functionalities."
+}], "Subitem",
+ CellID->1869468586,ExpressionUUID->"59d3378b-54f2-46b9-b529-f07e06995d9a"],
+
+Cell[TextData[{
+ StyleBox["Algorithm Design",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Develop",
+ " ",
+ "algorithms",
+ " ",
+ "for",
+ " ",
+ "complex",
+ " ",
+ "operations",
+ " ",
+ "within",
+ " ",
+ "methods."
+}], "Subitem",
+ CellID->325285645,ExpressionUUID->"4767a5ea-6737-4678-8851-88af353be028"],
+
+Cell[TextData[{
+ StyleBox["Implementation (Coding)",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->1729953900,ExpressionUUID->"f3d77f9b-17e2-4d98-8aca-9fc7ee724781"],
+
+Cell[TextData[{
+ StyleBox["Write Code",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Translate",
+ " ",
+ "the",
+ " ",
+ "class",
+ " ",
+ "designs",
+ " ",
+ "into",
+ " ",
+ "code",
+ " ",
+ "using",
+ " ",
+ "an",
+ " ",
+ "object-oriented",
+ " ",
+ "programming",
+ " ",
+ "language",
+ " ",
+ "(e.g.,",
+ " ",
+ "Java,",
+ " ",
+ "C++,",
+ " ",
+ "Python)."
+}], "Subitem",
+ CellID->554100567,ExpressionUUID->"ad98652c-3ca0-4ab6-84b2-5766f58d25a1"],
+
+Cell[TextData[{
+ StyleBox["Adhere to Coding Standards",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Follow",
+ " ",
+ "best",
+ " ",
+ "practices",
+ " ",
+ "and",
+ " ",
+ "coding",
+ " ",
+ "standards",
+ " ",
+ "for",
+ " ",
+ "readability",
+ " ",
+ "and",
+ " ",
+ "maintainability."
+}], "Subitem",
+ CellID->1279136177,ExpressionUUID->"7e791830-ef03-44d2-b1f7-746961a09fbb"],
+
+Cell[TextData[{
+ StyleBox["Implement Design Patterns",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Ensure",
+ " ",
+ "the",
+ " ",
+ "design",
+ " ",
+ "patterns",
+ " ",
+ "are",
+ " ",
+ "correctly",
+ " ",
+ "realized",
+ " ",
+ "in",
+ " ",
+ "the",
+ " ",
+ "code."
+}], "Subitem",
+ CellID->2130420369,ExpressionUUID->"93918998-c2bd-4323-9905-0f8daf29d7f7"],
+
+Cell[TextData[{
+ StyleBox["Testing",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->980295352,ExpressionUUID->"8a33cb90-0670-4cdf-a450-0e2438c17a63"],
+
+Cell[TextData[{
+ StyleBox["Unit Testing",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Test",
+ " ",
+ "individual",
+ " ",
+ "classes",
+ " ",
+ "and",
+ " ",
+ "methods",
+ " ",
+ "for",
+ " ",
+ "correctness."
+}], "Subitem",
+ CellID->329441280,ExpressionUUID->"6e2ed2ae-3492-42cd-bebc-bd437f74b0c5"],
+
+Cell[TextData[{
+ StyleBox["Integration Testing",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Verify",
+ " ",
+ "the",
+ " ",
+ "interactions",
+ " ",
+ "between",
+ " ",
+ "classes",
+ " ",
+ "and",
+ " ",
+ "modules",
+ " ",
+ "work",
+ " ",
+ "as",
+ " ",
+ "intended."
+}], "Subitem",
+ CellID->706750994,ExpressionUUID->"aeea4d99-1a2d-4b8b-ab6c-1a1424d31633"],
+
+Cell[TextData[{
+ StyleBox["System Testing",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Test",
+ " ",
+ "the",
+ " ",
+ "complete",
+ " ",
+ "integrated",
+ " ",
+ "system",
+ " ",
+ "to",
+ " ",
+ "ensure",
+ " ",
+ "it",
+ " ",
+ "meets",
+ " ",
+ "the",
+ " ",
+ "requirements."
+}], "Subitem",
+ CellID->631904601,ExpressionUUID->"78f58a58-7a93-437d-a14f-6daa51dd907b"],
+
+Cell[TextData[{
+ StyleBox["Use Test Patterns",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Apply",
+ " ",
+ "testing",
+ " ",
+ "patterns",
+ " ",
+ "and",
+ " ",
+ "frameworks",
+ " ",
+ "to",
+ " ",
+ "organize",
+ " ",
+ "and",
+ " ",
+ "automate",
+ " ",
+ "tests."
+}], "Subitem",
+ CellID->1113994592,ExpressionUUID->"b1192e98-5ac9-44ba-af9d-9a9688306b14"],
+
+Cell[TextData[{
+ StyleBox["Deployment",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "ItemNumbered",
+ CellID->1144673198,ExpressionUUID->"e7122670-4843-4eeb-863c-640691c338cc"],
+
+Cell[TextData[{
+ StyleBox["Prepare the Environment",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Set",
+ " ",
+ "up",
+ " ",
+ "the",
+ " ",
+ "necessary",
+ " ",
+ "hardware",
+ " ",
+ "and",
+ " ",
+ "software",
+ " ",
+ "environments",
+ " ",
+ "for",
+ " ",
+ "deployment."
+}], "Subitem",
+ CellID->1363928960,ExpressionUUID->"45b0623a-1c20-412d-a399-870619d21bae"],
+
+Cell[TextData[{
+ StyleBox["Deploy the System",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Install",
+ " ",
+ "the",
+ " ",
+ "system",
+ " ",
+ "in",
+ " ",
+ "the",
+ " ",
+ "production",
+ " ",
+ "environment."
+}], "Subitem",
+ CellID->1313582642,ExpressionUUID->"a285dc25-e6ad-4ba7-b9a2-2a97806c18dd"],
+
+Cell[TextData[{
+ StyleBox["User Training and Documentation",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Provide",
+ " ",
+ "documentation",
+ " ",
+ "and",
+ " ",
+ "training",
+ " ",
+ "to",
+ " ",
+ "users",
+ " ",
+ "and",
+ " ",
+ "support",
+ " ",
+ "staff."
+}], "Subitem",
+ CellID->1251572934,ExpressionUUID->"3f69dc19-3cbf-4fa5-bf9f-c0e89144515c"],
+
+Cell[TextData[{
+ "10.",
+ " ",
+ StyleBox["Maintenance and Iteration",
+  FontWeight->"Bold"],
+ " ",
+ ":"
+}], "Text",
+ CellID->583979373,ExpressionUUID->"697e63ce-7a21-41e7-88ab-2de2f92380ed"],
+
+Cell[TextData[{
+ StyleBox["Monitor Performance",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Continuously",
+ " ",
+ "monitor",
+ " ",
+ "the",
+ " ",
+ "system",
+ " ",
+ "for",
+ " ",
+ "issues",
+ " ",
+ "or",
+ " ",
+ "areas",
+ " ",
+ "of",
+ " ",
+ "improvement."
+}], "Subitem",
+ CellID->941055221,ExpressionUUID->"370215d7-c42f-4c9b-80e1-64a2ed3035de"],
+
+Cell[TextData[{
+ StyleBox["Bug Fixing and Updates",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Address",
+ " ",
+ "defects",
+ " ",
+ "and",
+ " ",
+ "make",
+ " ",
+ "necessary",
+ " ",
+ "updates",
+ " ",
+ "or",
+ " ",
+ "enhancements."
+}], "Subitem",
+ CellID->98039192,ExpressionUUID->"99d65929-b0f2-4c91-9582-e8e832bcd108"],
+
+Cell[TextData[{
+ StyleBox["Iterative Development",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Revisit",
+ " ",
+ "and",
+ " ",
+ "refine",
+ " ",
+ "earlier",
+ " ",
+ "stages",
+ " ",
+ "as",
+ " ",
+ "new",
+ " ",
+ "requirements",
+ " ",
+ "emerge",
+ " ",
+ "or",
+ " ",
+ "existing",
+ " ",
+ "ones",
+ " ",
+ "change."
+}], "Subitem",
+ CellID->624742695,ExpressionUUID->"7690f613-ed77-4542-8224-f297d9cb7ad2"],
+
+Cell["\<\
+By following these steps, incorporating the discovery of classes and the \
+application of design patterns, developers can create robust, maintainable, \
+and scalable object-oriented systems.\
+\>", "Text",
+ CellID->1002924682,ExpressionUUID->"c623e2fb-0022-46a6-8d74-23b2f95486fe"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Bottom-up Functional Programming", "Section",
+ CellID->555985071,ExpressionUUID->"8fac7449-3822-4472-a033-d867fc2a333a"],
+
+Cell[CellGroupData[{
+
+Cell["Summary", "Subsection",
+ CellID->739740200,ExpressionUUID->"e422f4c5-d80a-4997-8f62-3d2eef66d783"],
+
+Cell["\<\
+Functional Programming (FP) development using the bottom-up approach involves \
+iteratively subdividing code, identifying patterns, and creating a Domain \
+Specific Language (DSL) tailored to the problem domain, typically in a \
+LISP-like language. This process includes designing new operators if needed, \
+balancing the use of the DSL with core language expressions, and continuously \
+refining the solution. The unique experience of programming in FP is \
+characterized by brainstorming while coding and persistently re-evaluating \
+the code, which allows for the discovery of more abstract and powerful \
+constructs to solve concrete problems.\
+\>", "Text",
+ CellID->1030708917,ExpressionUUID->"956e9a7c-2f07-4bf5-91e3-cfa5585c89fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["LLM prompt", "Subsection",
+ CellID->1521671317,ExpressionUUID->"2399b8fd-c973-4fda-9aba-0cae2b534689"],
+
+Cell["\<\
+Here is an LLM prompt to generate step-by-step descriptions like the one \
+below:\
+\>", "Text",
+ CellID->347072696,ExpressionUUID->"e82e3e2d-8d06-40ca-ae13-36bfb146e14c"],
+
+Cell["\<\
+Write down the steps of Functional Programming (FP) development using the \
+Bottom-up principle. Assume a LISP-like FP language is used. Mention how a \
+new Domain Specific Language (DSL) is derived that fits the problem area and \
+with that DSL we write programs that solve the given, more concrete problems. \
+Emphasize the iteration process of subdividing the code into parts, \
+discovering patterns in the code, making the DSL, programming new operators \
+if needed, and stopping after finding the right balance of DSL vs core \
+expressions with it. Mention that brainstorming while coding makes \
+programming FP languages very unique experience, and requires tireless \
+re-evaluation of the code written.\
+\>", "ItemParagraph",
+ Background->GrayLevel[0.97],
+ CellID->685216420,ExpressionUUID->"c2c82ffe-c19f-488f-9f73-b29d7652425c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Step-by-step", "Subsection",
+ CellID->1625055726,ExpressionUUID->"e6b2b6b9-f954-4ea2-95be-846631f3f00d"],
+
+Cell["\<\
+Functional Programming (FP) Development Using the Bottom-Up Principle in a \
+LISP-like Language\
+\>", "Text",
+ FontWeight->"Bold",
+ CellID->614564336,ExpressionUUID->"12b9c138-c60f-47ed-ac28-d117c845a6b7"],
+
+Cell["\<\
+Developing software using functional programming and the bottom-up approach \
+involves building complex solutions from simple, reusable functions. In a \
+LISP-like FP language, this process is highly iterative and emphasizes \
+creating abstractions that form a Domain Specific Language (DSL) tailored to \
+the problem domain. Below are the steps detailing this approach:\
+\>", "Text",
+ CellID->1733936729,ExpressionUUID->"ea79bd0a-8426-40ab-8628-545cf85e47d8"],
+
+Cell[TextData[StyleBox["Identify the Core Problem and Subdivide It",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->921514513,ExpressionUUID->"795f4850-4fe4-4878-8a93-fa95639e3d5c"],
+
+Cell[TextData[{
+ StyleBox["Understand the Problem",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Begin",
+ " ",
+ "by",
+ " ",
+ "thoroughly",
+ " ",
+ "understanding",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "you",
+ " ",
+ "aim",
+ " ",
+ "to",
+ " ",
+ "solve."
+}], "Subitem",
+ CellID->242357827,ExpressionUUID->"e2392a99-4f57-4447-95ce-6e6167232835"],
+
+Cell[TextData[{
+ StyleBox["Decompose into Subproblems",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Break",
+ " ",
+ "down",
+ " ",
+ "the",
+ " ",
+ "main",
+ " ",
+ "problem",
+ " ",
+ "into",
+ " ",
+ "smaller,",
+ " ",
+ "manageable",
+ " ",
+ "sub-problems",
+ " ",
+ "that",
+ " ",
+ "can",
+ " ",
+ "be",
+ " ",
+ "individually",
+ " ",
+ "addressed."
+}], "Subitem",
+ CellChangeTimes->{3.938095355085828*^9},
+ CellID->1679003677,ExpressionUUID->"7ba60e68-a101-435d-bcea-98e3ca9d6433"],
+
+Cell[TextData[StyleBox["Implement Basic Functions (Bottom Level)",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1079677759,ExpressionUUID->"16a0bb57-69b1-4abe-893f-b20036f50b8f"],
+
+Cell[TextData[{
+ StyleBox["Write Simple Functions",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Start",
+ " ",
+ "coding",
+ " ",
+ "small,",
+ " ",
+ "pure",
+ " ",
+ "functions",
+ " ",
+ "that",
+ " ",
+ "perform",
+ " ",
+ "fundamental",
+ " ",
+ "operations",
+ " ",
+ "related",
+ " ",
+ "to",
+ " ",
+ "the",
+ " ",
+ "sub-problems."
+}], "Subitem",
+ CellChangeTimes->{3.938095356615396*^9},
+ CellID->2054762010,ExpressionUUID->"c88b29fa-dd9e-4a1f-a47b-41087ea81b65"],
+
+Cell[TextData[{
+ StyleBox["Ensure Function Purity",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Each",
+ " ",
+ "function",
+ " ",
+ "should",
+ " ",
+ "avoid",
+ " ",
+ "side-effects,",
+ " ",
+ "taking",
+ " ",
+ "inputs",
+ " ",
+ "and",
+ " ",
+ "producing",
+ " ",
+ "outputs",
+ " ",
+ "without",
+ " ",
+ "altering",
+ " ",
+ "external",
+ " ",
+ "states."
+}], "Subitem",
+ CellID->700574663,ExpressionUUID->"4d52754b-85ec-46eb-84bc-507871a757f2"],
+
+Cell[TextData[StyleBox["Test and Validate Functions",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->2053008187,ExpressionUUID->"1368bd2c-6e2a-4efb-8a7c-b16d6316566b"],
+
+Cell[TextData[{
+ StyleBox["Unit Testing",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Individually",
+ " ",
+ "test",
+ " ",
+ "each",
+ " ",
+ "function",
+ " ",
+ "to",
+ " ",
+ "ensure",
+ " ",
+ "correctness."
+}], "Subitem",
+ CellID->1288842560,ExpressionUUID->"b9235fdd-356b-4fd4-b7d4-679b0c89eb51"],
+
+Cell[TextData[{
+ StyleBox["Refinement",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Refine",
+ " ",
+ "the",
+ " ",
+ "functions",
+ " ",
+ "based",
+ " ",
+ "on",
+ " ",
+ "test",
+ " ",
+ "results",
+ " ",
+ "to",
+ " ",
+ "handle",
+ " ",
+ "edge",
+ " ",
+ "cases",
+ " ",
+ "and",
+ " ",
+ "improve",
+ " ",
+ "reliability."
+}], "Subitem",
+ CellID->2056842278,ExpressionUUID->"c6f018dc-55a9-456d-a314-ce9f63302d94"],
+
+Cell[TextData[StyleBox["Combine Functions to Solve Sub-problems",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellChangeTimes->{3.938095347734496*^9},
+ CellID->1303900587,ExpressionUUID->"00600bd8-305e-4204-a67d-ee99db744430"],
+
+Cell[TextData[{
+ StyleBox["Function Composition",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Combine",
+ " ",
+ "the",
+ " ",
+ "basic",
+ " ",
+ "functions",
+ " ",
+ "to",
+ " ",
+ "form",
+ " ",
+ "more",
+ " ",
+ "complex",
+ " ",
+ "functions",
+ " ",
+ "that",
+ " ",
+ "start",
+ " ",
+ "solving",
+ " ",
+ "parts",
+ " ",
+ "of",
+ " ",
+ "the",
+ " ",
+ "sub-problems."
+}], "Subitem",
+ CellChangeTimes->{3.938095349998624*^9},
+ CellID->1734031721,ExpressionUUID->"7ac356c7-d069-4440-87e0-0a54b130b94d"],
+
+Cell[TextData[{
+ StyleBox["Higher-Order Functions",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Utilize",
+ " ",
+ "higher-order",
+ " ",
+ "functions",
+ " ",
+ "(functions",
+ " ",
+ "that",
+ " ",
+ "take",
+ " ",
+ "other",
+ " ",
+ "functions",
+ " ",
+ "as",
+ " ",
+ "arguments",
+ " ",
+ "or",
+ " ",
+ "return",
+ " ",
+ "them)",
+ " ",
+ "to",
+ " ",
+ "enable",
+ " ",
+ "more",
+ " ",
+ "abstract",
+ " ",
+ "operations."
+}], "Subitem",
+ CellID->370561410,ExpressionUUID->"bc5b2e55-3faf-4262-ab32-e578b4a31b0d"],
+
+Cell[TextData[StyleBox["Discover Patterns and Abstractions",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->323041570,ExpressionUUID->"c1b10346-5623-4724-8344-08067f8921f1"],
+
+Cell[TextData[{
+ StyleBox["Code Review",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Regularly",
+ " ",
+ "review",
+ " ",
+ "your",
+ " ",
+ "code",
+ " ",
+ "to",
+ " ",
+ "identify",
+ " ",
+ "recurring",
+ " ",
+ "patterns",
+ " ",
+ "or",
+ " ",
+ "duplicated",
+ " ",
+ "code",
+ " ",
+ "segments."
+}], "Subitem",
+ CellID->521007374,ExpressionUUID->"36fa931f-6d0a-4ee3-a4f0-8bae1e1188d3"],
+
+Cell[TextData[{
+ StyleBox["Pattern Recognition",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Pay",
+ " ",
+ "attention",
+ " ",
+ "to",
+ " ",
+ "similarities",
+ " ",
+ "in",
+ " ",
+ "function",
+ " ",
+ "structures",
+ " ",
+ "or",
+ " ",
+ "sequences",
+ " ",
+ "of",
+ " ",
+ "operations."
+}], "Subitem",
+ CellID->1280105999,ExpressionUUID->"822ad10b-0085-4dbf-8a90-9b2a7680eac3"],
+
+Cell[TextData[StyleBox["Abstract Patterns into Generic Functions and \
+Operators",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->1250349547,ExpressionUUID->"308f8cd7-6753-41e1-9d53-b119fb568b34"],
+
+Cell[TextData[{
+ StyleBox["Create Abstractions",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Abstract",
+ " ",
+ "the",
+ " ",
+ "identified",
+ " ",
+ "patterns",
+ " ",
+ "into",
+ " ",
+ "generic",
+ " ",
+ "higher-order",
+ " ",
+ "functions",
+ " ",
+ "or",
+ " ",
+ "operators",
+ " ",
+ "that",
+ " ",
+ "can",
+ " ",
+ "be",
+ " ",
+ "reused."
+}], "Subitem",
+ CellID->1497350534,ExpressionUUID->"48d343a5-906e-435c-a1da-de57b490f720"],
+
+Cell[TextData[{
+ StyleBox["Enhance Modularity",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "By",
+ " ",
+ "abstracting",
+ " ",
+ "patterns,",
+ " ",
+ "you",
+ " ",
+ "enhance",
+ " ",
+ "code",
+ " ",
+ "modularity",
+ " ",
+ "and",
+ " ",
+ "reduce",
+ " ",
+ "redundancy."
+}], "Subitem",
+ CellID->1757049392,ExpressionUUID->"7b557d76-6960-4e7b-bfe4-405a60e13bf8"],
+
+Cell[TextData[StyleBox["Develop a Domain Specific Language (DSL)",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->681501447,ExpressionUUID->"51f96075-2465-4d1f-87b9-d0e059c9a359"],
+
+Cell[TextData[{
+ StyleBox["Define Domain Concepts",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Based",
+ " ",
+ "on",
+ " ",
+ "the",
+ " ",
+ "abstractions,",
+ " ",
+ "define",
+ " ",
+ "functions",
+ " ",
+ "and",
+ " ",
+ "operators",
+ " ",
+ "that",
+ " ",
+ "closely",
+ " ",
+ "represent",
+ " ",
+ "concepts",
+ " ",
+ "in",
+ " ",
+ "your",
+ " ",
+ "problem",
+ " ",
+ "domain."
+}], "Subitem",
+ CellID->1464530278,ExpressionUUID->"433861b0-b766-411a-8ba1-2c0780c68c81"],
+
+Cell[TextData[{
+ StyleBox["Build the DSL",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Assemble",
+ " ",
+ "these",
+ " ",
+ "domain-specific",
+ " ",
+ "abstractions",
+ " ",
+ "into",
+ " ",
+ "a",
+ " ",
+ "DSL,",
+ " ",
+ "effectively",
+ " ",
+ "extending",
+ " ",
+ "the",
+ " ",
+ "language",
+ " ",
+ "with",
+ " ",
+ "constructs",
+ " ",
+ "that",
+ " ",
+ "make",
+ " ",
+ "expressing",
+ " ",
+ "solutions",
+ " ",
+ "more",
+ " ",
+ "natural",
+ " ",
+ "and",
+ " ",
+ "concise."
+}], "Subitem",
+ CellID->2050304079,ExpressionUUID->"0978b271-9129-47bd-9d5a-c54adc71aced"],
+
+Cell[TextData[StyleBox["Solve Concrete Problems Using the DSL",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->938055991,ExpressionUUID->"591ec7c7-20d1-4edd-808f-35a3d844a007"],
+
+Cell[TextData[{
+ StyleBox["Express Solutions Naturally",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Use",
+ " ",
+ "the",
+ " ",
+ "DSL",
+ " ",
+ "to",
+ " ",
+ "write",
+ " ",
+ "programs",
+ " ",
+ "that",
+ " ",
+ "solve",
+ " ",
+ "the",
+ " ",
+ "concrete",
+ " ",
+ "problems,",
+ " ",
+ "benefiting",
+ " ",
+ "from",
+ " ",
+ "the",
+ " ",
+ "expressiveness",
+ " ",
+ "of",
+ " ",
+ "the",
+ " ",
+ "domain-specific",
+ " ",
+ "constructs."
+}], "Subitem",
+ CellID->1229588110,ExpressionUUID->"76c2926a-a3c3-41e3-a827-142db3bf7764"],
+
+Cell[TextData[{
+ StyleBox["Improve Readability",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Solutions",
+ " ",
+ "written",
+ " ",
+ "in",
+ " ",
+ "the",
+ " ",
+ "DSL",
+ " ",
+ "are",
+ " ",
+ "often",
+ " ",
+ "more",
+ " ",
+ "readable",
+ " ",
+ "and",
+ " ",
+ "maintainable,",
+ " ",
+ "as",
+ " ",
+ "they",
+ " ",
+ "closely",
+ " ",
+ "match",
+ " ",
+ "the",
+ " ",
+ "problem's",
+ " ",
+ "terminology",
+ " ",
+ "and",
+ " ",
+ "structures."
+}], "Subitem",
+ CellID->452229689,ExpressionUUID->"28c48fa9-a1e3-4d79-b902-42cbe291a82f"],
+
+Cell[TextData[StyleBox["Iterate and Refine the DSL",
+ FontWeight->"Bold"]], "ItemNumbered",
+ CellID->679756290,ExpressionUUID->"7df8a0fc-03c7-4a5d-ab87-e05db79e7ca4"],
+
+Cell[TextData[{
+ StyleBox["Continuous Improvement",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Iteratively",
+ " ",
+ "refine",
+ " ",
+ "the",
+ " ",
+ "DSL",
+ " ",
+ "by",
+ " ",
+ "adding",
+ " ",
+ "new",
+ " ",
+ "abstractions",
+ " ",
+ "or",
+ " ",
+ "adjusting",
+ " ",
+ "existing",
+ " ",
+ "ones",
+ " ",
+ "as",
+ " ",
+ "you",
+ " ",
+ "gain",
+ " ",
+ "a",
+ " ",
+ "deeper",
+ " ",
+ "understanding",
+ " ",
+ "of",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "domain."
+}], "Subitem",
+ CellID->50963990,ExpressionUUID->"078126e9-1baf-4cc1-8182-ea548f015e4c"],
+
+Cell[TextData[{
+ StyleBox["Balance Abstraction Levels",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Strive",
+ " ",
+ "to",
+ " ",
+ "find",
+ " ",
+ "the",
+ " ",
+ "right",
+ " ",
+ "balance",
+ " ",
+ "between",
+ " ",
+ "the",
+ " ",
+ "DSL's",
+ " ",
+ "complexity",
+ " ",
+ "and",
+ " ",
+ "simplicity,",
+ " ",
+ "ensuring",
+ " ",
+ "it",
+ " ",
+ "remains",
+ " ",
+ "useful",
+ " ",
+ "without",
+ " ",
+ "becoming",
+ " ",
+ "unwieldy."
+}], "Subitem",
+ CellID->1853288424,ExpressionUUID->"3d6ca6c2-ed99-4f6f-94bd-86cdf936b53a"],
+
+Cell[TextData[{
+ "10.",
+ " ",
+ StyleBox["Program New Operators if Needed",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->1115726080,ExpressionUUID->"bbf8df03-8579-4a01-9f85-6a5e43c9e2ae"],
+
+Cell[TextData[{
+ StyleBox["Extend Core Language Features",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Implement",
+ " ",
+ "new",
+ " ",
+ "operators",
+ " ",
+ "or",
+ " ",
+ "syntactic",
+ " ",
+ "constructs",
+ " ",
+ "within",
+ " ",
+ "the",
+ " ",
+ "DSL",
+ " ",
+ "when",
+ " ",
+ "standard",
+ " ",
+ "functions",
+ " ",
+ "are",
+ " ",
+ "insufficient."
+}], "Subitem",
+ CellID->181020956,ExpressionUUID->"9a744f7a-bddf-43ac-bc68-d71e3f67b7f4"],
+
+Cell[TextData[{
+ StyleBox["Optimize for the Domain",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Tailor",
+ " ",
+ "these",
+ " ",
+ "new",
+ " ",
+ "operators",
+ " ",
+ "to",
+ " ",
+ "optimize",
+ " ",
+ "expressiveness",
+ " ",
+ "and",
+ " ",
+ "efficiency",
+ " ",
+ "for",
+ " ",
+ "domain-specific",
+ " ",
+ "tasks."
+}], "Subitem",
+ CellID->1582363340,ExpressionUUID->"a6109da2-09d1-45dd-8841-748c73d38a46"],
+
+Cell[TextData[{
+ "11.",
+ " ",
+ StyleBox["Stop Refining at the Right Balance Point",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->343170932,ExpressionUUID->"5dafc20c-2be7-407e-976c-62e4f387f5f5"],
+
+Cell[TextData[{
+ StyleBox["Assess the DSL's Effectiveness",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Periodically",
+ " ",
+ "assess",
+ " ",
+ "whether",
+ " ",
+ "further",
+ " ",
+ "abstraction",
+ " ",
+ "adds",
+ " ",
+ "value",
+ " ",
+ "or",
+ " ",
+ "unnecessary",
+ " ",
+ "complexity."
+}], "Subitem",
+ CellID->1680261929,ExpressionUUID->"da2b1d85-e905-4fa8-9a36-f5abd5b34f44"],
+
+Cell[TextData[{
+ StyleBox["Finalize the DSL",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Decide",
+ " ",
+ "to",
+ " ",
+ "stop",
+ " ",
+ "refining",
+ " ",
+ "when",
+ " ",
+ "the",
+ " ",
+ "DSL",
+ " ",
+ "adequately",
+ " ",
+ "addresses",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "needs",
+ " ",
+ "without",
+ " ",
+ "overcomplicating",
+ " ",
+ "the",
+ " ",
+ "language."
+}], "Subitem",
+ CellID->752282653,ExpressionUUID->"19c987d0-fa02-4e18-a0de-17ade70ee44c"],
+
+Cell[TextData[{
+ "12.",
+ " ",
+ StyleBox["Brainstorm and Engage in Reflective Coding",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->1378319082,ExpressionUUID->"71eb196f-c94a-45fc-a79a-75d34f77af9d"],
+
+Cell[TextData[{
+ StyleBox["Dynamic Problem Solving",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Embrace",
+ " ",
+ "the",
+ " ",
+ "iterative",
+ " ",
+ "nature",
+ " ",
+ "of",
+ " ",
+ "FP",
+ " ",
+ "development",
+ " ",
+ "by",
+ " ",
+ "constantly",
+ " ",
+ "brainstorming",
+ " ",
+ "new",
+ " ",
+ "ideas",
+ " ",
+ "and",
+ " ",
+ "approaches",
+ " ",
+ "while",
+ " ",
+ "coding."
+}], "Subitem",
+ CellID->502710985,ExpressionUUID->"82c61c4f-37a4-4004-9d43-40ae3b9b04e1"],
+
+Cell[TextData[{
+ StyleBox["Reflect on Code Written",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Regularly",
+ " ",
+ "reflect",
+ " ",
+ "on",
+ " ",
+ "your",
+ " ",
+ "code",
+ " ",
+ "to",
+ " ",
+ "identify",
+ " ",
+ "improvements,",
+ " ",
+ "alternative",
+ " ",
+ "solutions,",
+ " ",
+ "or",
+ " ",
+ "more",
+ " ",
+ "elegant",
+ " ",
+ "abstractions."
+}], "Subitem",
+ CellID->862857597,ExpressionUUID->"b31684e7-5751-42b0-9626-55bf62e98c0a"],
+
+Cell[TextData[{
+ "13.",
+ " ",
+ StyleBox["Re-evaluate and Refactor Continuously",
+  FontWeight->"Bold"]
+}], "Text",
+ CellID->90564588,ExpressionUUID->"6c9a0862-61b6-412f-8cc4-232bcabf24ab"],
+
+Cell[TextData[{
+ StyleBox["Adapt to New Insights",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Be",
+ " ",
+ "prepared",
+ " ",
+ "to",
+ " ",
+ "re-evaluate",
+ " ",
+ "and",
+ " ",
+ "refactor",
+ " ",
+ "code",
+ " ",
+ "segments",
+ " ",
+ "as",
+ " ",
+ "new",
+ " ",
+ "patterns",
+ " ",
+ "emerge",
+ " ",
+ "or",
+ " ",
+ "as",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "understanding",
+ " ",
+ "evolves."
+}], "Subitem",
+ CellID->1700608440,ExpressionUUID->"f364e615-4d9f-42ae-a698-0926f5392bb2"],
+
+Cell[TextData[{
+ StyleBox["Maintain Code Health",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Continuous",
+ " ",
+ "re-evaluation",
+ " ",
+ "ensures",
+ " ",
+ "the",
+ " ",
+ "codebase",
+ " ",
+ "remains",
+ " ",
+ "clean,",
+ " ",
+ "efficient,",
+ " ",
+ "and",
+ " ",
+ "maintainable."
+}], "Subitem",
+ CellID->1266193157,ExpressionUUID->"5892a0f8-27df-4fa3-b477-0a2be804c655"],
+
+Cell["Emphasizing the Unique Experience of FP Development", "Text",
+ FontWeight->"Bold",
+ CellID->1492931576,ExpressionUUID->"40bf5c8c-871b-4a2c-9efd-cf93a9ed70f5"],
+
+Cell["\<\
+Programming in functional languages, especially using the bottom-up approach, \
+offers a unique experience characterized by:\
+\>", "Text",
+ CellID->502066284,ExpressionUUID->"bcebc59b-cb08-4fb3-a3a0-4ebcf64cf9fb"],
+
+Cell[TextData[{
+ StyleBox["Interactive Development",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "The",
+ " ",
+ "process",
+ " ",
+ "is",
+ " ",
+ "highly",
+ " ",
+ "interactive",
+ " ",
+ "and",
+ " ",
+ "exploratory,",
+ " ",
+ "encouraging",
+ " ",
+ "developers",
+ " ",
+ "to",
+ " ",
+ "think",
+ " ",
+ "deeply",
+ " ",
+ "about",
+ " ",
+ "functions",
+ " ",
+ "and",
+ " ",
+ "their",
+ " ",
+ "compositions."
+}], "Item",
+ CellID->764786125,ExpressionUUID->"7358bf4f-ef2f-46aa-99e0-f84385f6d987"],
+
+Cell[TextData[{
+ StyleBox["Creative Problem Solving",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Brainstorming",
+ " ",
+ "while",
+ " ",
+ "coding",
+ " ",
+ "leads",
+ " ",
+ "to",
+ " ",
+ "creative",
+ " ",
+ "solutions",
+ " ",
+ "and",
+ " ",
+ "innovative",
+ " ",
+ "abstractions",
+ " ",
+ "that",
+ " ",
+ "might",
+ " ",
+ "not",
+ " ",
+ "emerge",
+ " ",
+ "in",
+ " ",
+ "a",
+ " ",
+ "top-down",
+ " ",
+ "approach."
+}], "Item",
+ CellID->1070775580,ExpressionUUID->"ecaa0f88-7f98-4a4c-b614-6daf8f0ec981"],
+
+Cell[TextData[{
+ StyleBox["Iterative Refinement",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "The",
+ " ",
+ "necessity",
+ " ",
+ "to",
+ " ",
+ "continuously",
+ " ",
+ "re-evaluate",
+ " ",
+ "and",
+ " ",
+ "refine",
+ " ",
+ "code",
+ " ",
+ "requires",
+ " ",
+ "diligence",
+ " ",
+ "and",
+ " ",
+ "openness",
+ " ",
+ "to",
+ " ",
+ "change,",
+ " ",
+ "fostering",
+ " ",
+ "a",
+ " ",
+ "deep",
+ " ",
+ "understanding",
+ " ",
+ "of",
+ " ",
+ "both",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "and",
+ " ",
+ "the",
+ " ",
+ "solution",
+ " ",
+ "space."
+}], "Item",
+ CellID->612211200,ExpressionUUID->"b2e4ffbd-ee86-41e7-a45d-b0160dc6b1da"],
+
+Cell[TextData[{
+ StyleBox["Building a Customized Language",
+  FontWeight->"Bold"],
+ " ",
+ ":",
+ " ",
+ "Developing",
+ " ",
+ "a",
+ " ",
+ "DSL",
+ " ",
+ "tailored",
+ " ",
+ "to",
+ " ",
+ "the",
+ " ",
+ "problem",
+ " ",
+ "domain",
+ " ",
+ "empowers",
+ " ",
+ "developers",
+ " ",
+ "to",
+ " ",
+ "express",
+ " ",
+ "solutions",
+ " ",
+ "more",
+ " ",
+ "naturally",
+ " ",
+ "and",
+ " ",
+ "efficiently."
+}], "Item",
+ CellID->839485623,ExpressionUUID->"c0a2b2d9-69ec-4dd9-ad47-a0e450b4257d"],
+
+Cell["Conclusion", "Text",
+ FontWeight->"Bold",
+ CellID->267304971,ExpressionUUID->"a66da3a4-eb30-4f91-8963-ab0d44bec217"],
+
+Cell["\<\
+Developing software using the bottom-up principle in a functional programming \
+language like LISP involves building from small, simple functions to a \
+powerful DSL that elegantly solves complex problems. This process is \
+iterative and demands constant re-evaluation and refinement, making FP \
+development both challenging and rewarding. By embracing this approach, \
+developers can create highly modular, reusable, and expressive code that not \
+only solves the problem at hand but also contributes to a deeper \
+understanding of the domain itself.\
+\>", "Text",
+ CellID->58858073,ExpressionUUID->"ffd781e4-f7a3-48a6-a2e0-d99a1118c6c8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "TutorialMoreAboutSection",
+ CellChangeTimes->{{3.843042384656711*^9, 3.843042386024461*^9}},
+ CellID->1159329753,ExpressionUUID->"6c507cf5-3138-459a-a5df-c8c364a35979"],
+
+Cell[TextData[ButtonBox["BookChapters",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:AntonAntonov/SoftwareDesignMethodsWithWLBook/guide/BookChapters"]], \
+"TutorialMoreAbout",
+ CellChangeTimes->{{3.938095563690097*^9, 3.938095570289283*^9}},
+ CellID->824948630,ExpressionUUID->"07976028-8ddd-40d2-b4b7-8e67b0be9ec5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tech Notes", "RelatedTutorialsSection",
+ CellID->940991360,ExpressionUUID->"b157d2c3-7279-4246-8d69-f54b4bebd455"],
+
+Cell["XXXX", "RelatedTutorials",
+ CellID->1172211012,ExpressionUUID->"2db76199-d79d-4ff9-a511-c744fb607d9e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->1704321082,ExpressionUUID->"6c1ec1ec-8aa5-4274-9a72-dae74b5825a8"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0.0", "HistoryData",
+  CellTags->"New",ExpressionUUID->"c0e82217-a1d9-4337-8ebe-469d7ececa9d"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"f27130fe-ecb8-4c6d-8d1a-cebe9a375344"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "525ee302-cec2-48ff-a86c-d1dfb56ed55e"]
+}], "History",
+ CellChangeTimes->{{3.938095541461609*^9, 3.938095542251403*^9}},
+ CellID->1387541488,ExpressionUUID->"5d2afd15-1fc9-4e9a-a765-c086c9bbac16"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->884866043,ExpressionUUID->"9dc83990-6475-4944-ae7f-1ed7dc4ababc"],
+
+Cell["Tech Note", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->619329226,ExpressionUUID->"1fc5c71e-fbd1-4d70-ba4b-798d04c9ef50"],
+
+Cell["AntonAntonov/SoftwareDesignMethodsWithWLBook", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->213064373,ExpressionUUID->"850df220-d159-41dc-9bfd-afbf2b0a8431"],
+
+Cell["AntonAntonov`SoftwareDesignMethodsWithWLBook`", "Categorization",
+ CellLabel->"Context",
+ CellID->1117677462,ExpressionUUID->"ffc85d99-c011-49b9-8889-ee0da4388175"],
+
+Cell["\<\
+AntonAntonov/SoftwareDesignMethodsWithWLBook/tutorial/\
+Typicalsoftwaredevelopmentworkflows\
+\>", "Categorization",
+ CellLabel->"URI",
+ CellID->765643525,ExpressionUUID->"8ba8ffc4-56ac-4283-a246-0f74f6bf92f1"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1656366224,ExpressionUUID->"8706947d-c7f0-4dd6-83bf-f5f98c13f419"],
+
+Cell["Object Oriented Programming", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.938095290242736*^9}},
+ CellID->716610707,ExpressionUUID->"7c4670fc-6ea0-4267-b9db-0be498375ba4"],
+
+Cell["OOP", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.938095291348876*^9}},
+ CellID->1722537815,ExpressionUUID->"ef1b333e-ff9a-4baf-aa90-bbc9630843e7"],
+
+Cell["Structural Programming", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.9380952985220623`*^9}},
+ CellID->841312414,ExpressionUUID->"d923a6f4-808c-4683-b296-bac1b41c7326"],
+
+Cell["Functional Programming", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.9380953020426826`*^9}},
+ CellID->1572010512,ExpressionUUID->"b72b984f-b425-4785-a76d-164123635b8c"],
+
+Cell["Design Patterns", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.938095307985827*^9}},
+ CellID->1687556558,ExpressionUUID->"e761822f-03cd-4897-ba5c-fe8b5cb490b6"],
+
+Cell["Top-down development", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.9380953194117327`*^9}},
+ CellID->135104388,ExpressionUUID->"b6dddff8-f1d0-4be5-a748-a2379a658c1b"],
+
+Cell["Bottom-up development", "Keywords",
+ CellChangeTimes->{{3.938095321391876*^9, 3.938095327916418*^9}},
+ CellID->893793632,ExpressionUUID->"f5866b72-1e33-4878-8866-bd1300d7e7f5"],
+
+Cell["", "Keywords",
+ CellChangeTimes->{{3.938095281898253*^9, 3.9380953147742167`*^9}},
+ CellID->435900177,ExpressionUUID->"4be08819-76f2-4707-b3b1-4fc412618ae9"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 1242}, {Automatic, 258}},
+TaggingRules-><|"Paclet" -> "AntonAntonov/SoftwareDesignMethodsWithWLBook"|>,
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TechNotePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"c3f91703-baeb-4423-937b-0cc356b72e58"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 129, 1, 112, "Title",ExpressionUUID->"25f41b13-4f40-42a2-9ae6-abe4c8769b1e",
+ CellID->87737001],
+Cell[CellGroupData[{
+Cell[730, 27, 106, 1, 44, "Section",ExpressionUUID->"9cb49501-4702-48b4-b0d4-bf2ec6657666",
+ CellID->684440745],
+Cell[839, 30, 241, 4, 42, "Text",ExpressionUUID->"d897ae3e-1555-4abb-96ea-588cb76c6ad3",
+ CellID->1473187883],
+Cell[1083, 36, 206, 4, 42, "Text",ExpressionUUID->"dc501fea-84d9-4950-9fb4-9ed4a8c2b3e9",
+ CellID->1529783318],
+Cell[1292, 42, 221, 4, 42, "Text",ExpressionUUID->"092407e2-9c78-42ea-86ff-f6db495d1c44",
+ CellID->1394003742]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1550, 51, 126, 1, 44, "Section",ExpressionUUID->"6e3b14c5-5651-43e8-9707-e9b121c21af4",
+ CellID->2121786671],
+Cell[CellGroupData[{
+Cell[1701, 56, 105, 1, 40, "Subsection",ExpressionUUID->"e2dc9b3d-8fa7-4ba9-b897-87cf956ae81c",
+ CellID->1902621062],
+Cell[1809, 59, 876, 13, 152, "Text",ExpressionUUID->"789e743d-f39e-4b5b-b094-337f2f6e2eb9",
+ CellID->1320685204]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2722, 77, 107, 1, 40, "Subsection",ExpressionUUID->"bae1f06b-1a3a-49a6-8e03-ec66cd85d3ec",
+ CellID->365248236],
+Cell[2832, 80, 181, 4, 24, "Text",ExpressionUUID->"cf654513-c049-48a7-a672-553a3ce35733",
+ CellID->1218839326],
+Cell[3016, 86, 225, 5, 39, "ItemParagraph",ExpressionUUID->"daaf069b-4b7c-4201-8a7d-66baec6e6a94",
+ CellID->186043349]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3278, 96, 108, 1, 40, "Subsection",ExpressionUUID->"e5b681c0-3e3c-4ccc-b03f-066026a62a46",
+ CellID->94376611],
+Cell[3389, 99, 169, 2, 24, "Text",ExpressionUUID->"13f4acc5-07e2-4aac-8292-6e54a4fc89f9",
+ CellID->1344769591],
+Cell[3561, 103, 160, 2, 26, "ItemNumbered",ExpressionUUID->"9b2dac66-f4fd-4829-a6d1-01712f12233e",
+ CellID->1424614909],
+Cell[3724, 107, 151, 1, 21, "Subitem",ExpressionUUID->"6d362068-69a7-496b-8e2a-c2c43c175e04",
+ CellID->1207595160],
+Cell[3878, 110, 171, 3, 21, "Subitem",ExpressionUUID->"2e7207c9-0bda-467a-a686-45ace757d3f3",
+ CellID->183906323],
+Cell[4052, 115, 165, 2, 26, "ItemNumbered",ExpressionUUID->"5db796b7-51d0-4547-8588-4bdb32c6c130",
+ CellID->684602628],
+Cell[4220, 119, 139, 1, 21, "Subitem",ExpressionUUID->"efd1b722-7482-4bc9-8b48-7605ff3f3aec",
+ CellID->2046471817],
+Cell[4362, 122, 167, 3, 21, "Subitem",ExpressionUUID->"14c09218-d6c8-4377-9447-6102db38be13",
+ CellID->953737967],
+Cell[4532, 127, 170, 3, 21, "Subitem",ExpressionUUID->"c05441a3-4c58-4e31-8604-21594d7f7116",
+ CellID->656070161],
+Cell[4705, 132, 163, 2, 26, "ItemNumbered",ExpressionUUID->"f50b828d-18f7-4616-91e2-c14cf32855a5",
+ CellID->1390152229],
+Cell[4871, 136, 174, 3, 21, "Subitem",ExpressionUUID->"ed235ccb-0f41-4ac0-b163-a216becd454e",
+ CellID->1813917090],
+Cell[5048, 141, 192, 4, 21, "Subitem",ExpressionUUID->"23658ae5-f7c8-450a-adc7-de68b4fd7b4a",
+ CellID->826678818],
+Cell[5243, 147, 164, 3, 21, "Subitem",ExpressionUUID->"ea285ed7-bac6-479a-949c-2c2aacfe813b",
+ CellID->1919181683],
+Cell[5410, 152, 161, 2, 26, "ItemNumbered",ExpressionUUID->"20e8a638-3a37-4b1c-a475-dfbd8445bd36",
+ CellID->482168241],
+Cell[5574, 156, 152, 1, 21, "Subitem",ExpressionUUID->"431b918c-c6e7-4ac5-85cf-4d6d0aa38c3f",
+ CellID->1345826356],
+Cell[5729, 159, 124, 1, 21, "Subsubitem",ExpressionUUID->"95cc9b82-e45e-4d62-8968-843eb24709f1",
+ CellID->2005795088],
+Cell[5856, 162, 116, 1, 21, "Subsubitem",ExpressionUUID->"360ea5a8-7597-46bc-a2c1-73766d3415fa",
+ CellID->199753410],
+Cell[5975, 165, 130, 1, 21, "Subsubitem",ExpressionUUID->"c06df405-2784-41d1-b15a-dd374ceea085",
+ CellID->738621609],
+Cell[6108, 168, 129, 1, 21, "Subitem",ExpressionUUID->"c63e955c-8380-49da-8cf5-7bae6ae26d58",
+ CellID->1557902803],
+Cell[6240, 171, 170, 2, 26, "ItemNumbered",ExpressionUUID->"c47da26c-01c8-4fb8-ba68-96cf830e7d70",
+ CellID->1551785797],
+Cell[6413, 175, 165, 3, 21, "Subitem",ExpressionUUID->"e2f8a42e-123d-4910-9e98-adc8ff646fbc",
+ CellID->1822481011],
+Cell[6581, 180, 165, 3, 21, "Subitem",ExpressionUUID->"7075f7a8-2087-4613-9c70-7750b8d14403",
+ CellID->879094716],
+Cell[6749, 185, 199, 4, 21, "Subitem",ExpressionUUID->"3fff5b9f-8949-44e9-b00d-7175f465ec34",
+ CellID->257400452],
+Cell[6951, 191, 167, 2, 26, "ItemNumbered",ExpressionUUID->"0a322c32-b8b8-4d80-a439-43d9b2b017e4",
+ CellID->1097331706],
+Cell[7121, 195, 148, 1, 21, "Subitem",ExpressionUUID->"53a97eca-8d79-4a08-b37b-614b6a93a322",
+ CellID->264422306],
+Cell[7272, 198, 380, 29, 21, "Subitem",ExpressionUUID->"8b7de689-ea4e-483f-8da7-05ec32ddf782",
+ CellID->1002031299],
+Cell[7655, 229, 147, 1, 21, "Subitem",ExpressionUUID->"acd5610f-3b68-4cfd-aae7-05367d6771d1",
+ CellID->573282519],
+Cell[7805, 232, 165, 2, 26, "ItemNumbered",ExpressionUUID->"2e8fb55d-0a3f-4bb6-9023-34dfd19ebfbe",
+ CellID->1547656391],
+Cell[7973, 236, 147, 1, 21, "Subitem",ExpressionUUID->"0e3a7328-537e-40f0-8749-5269b9d427ff",
+ CellID->1139031073],
+Cell[8123, 239, 168, 3, 21, "Subitem",ExpressionUUID->"2bbb55b9-d83d-4a74-af55-da0426488198",
+ CellID->1026014553],
+Cell[8294, 244, 150, 1, 21, "Subitem",ExpressionUUID->"18bed4a0-0530-4be9-b52b-c17f58020849",
+ CellID->2080390508],
+Cell[8447, 247, 165, 2, 26, "ItemNumbered",ExpressionUUID->"89359839-514c-437f-b6b1-e5223a722c10",
+ CellID->1942011149],
+Cell[8615, 251, 194, 4, 21, "Subitem",ExpressionUUID->"87afad0b-2782-4c77-b814-8e57682b6b5a",
+ CellID->1924914137],
+Cell[8812, 257, 188, 4, 21, "Subitem",ExpressionUUID->"bb3de747-ce83-4314-9e7f-cdb88f89eaaa",
+ CellID->190758504],
+Cell[9003, 263, 144, 1, 21, "Subitem",ExpressionUUID->"f69c33c3-061d-4229-b92a-d0c0cf3faa5f",
+ CellID->2032575404],
+Cell[9150, 266, 156, 2, 26, "ItemNumbered",ExpressionUUID->"4a1bd84a-e02b-4951-802b-0799ed7c53db",
+ CellID->1472442199],
+Cell[9309, 270, 175, 3, 21, "Subitem",ExpressionUUID->"63f0fb8c-8d0f-4557-a518-0dd978fba1ee",
+ CellID->1881974212],
+Cell[9487, 275, 175, 3, 21, "Subitem",ExpressionUUID->"2341cd2d-4291-4366-9c50-da4104e37126",
+ CellID->53944421],
+Cell[9665, 280, 175, 3, 21, "Subitem",ExpressionUUID->"f59fec77-2fdd-484f-b292-519d49029336",
+ CellID->405784713],
+Cell[9843, 285, 167, 6, 24, "Text",ExpressionUUID->"6a72b7e8-c7b5-4a09-bd88-f017c7678fba",
+ CellID->1763092166],
+Cell[10013, 293, 137, 1, 21, "Subitem",ExpressionUUID->"1a85b1ee-0273-4437-b7b3-1f64dfd255cb",
+ CellID->1310672656],
+Cell[10153, 296, 129, 1, 21, "Subsubitem",ExpressionUUID->"50872b0d-d38d-47a5-9c3f-e3eb34c89851",
+ CellID->1735562113],
+Cell[10285, 299, 134, 1, 21, "Subsubitem",ExpressionUUID->"6c7400d1-0b9c-4fbf-adf2-2e0c096ee4ea",
+ CellID->322055990],
+Cell[10422, 302, 129, 1, 21, "Subsubitem",ExpressionUUID->"09752f3b-3281-4bc5-b6d4-3756504212ff",
+ CellID->1136233490],
+Cell[10554, 305, 134, 1, 21, "Subsubitem",ExpressionUUID->"b8d7e5f9-32d3-44e1-8af9-08600f9d23bf",
+ CellID->1251677306],
+Cell[10691, 308, 138, 1, 21, "Subitem",ExpressionUUID->"d7828d78-7332-4039-b042-053b1d6eb505",
+ CellID->190675930],
+Cell[10832, 311, 173, 6, 24, "Text",ExpressionUUID->"02629fd6-a4cd-4444-a994-36eaa183add5",
+ CellID->644754186],
+Cell[11008, 319, 187, 4, 21, "Subitem",ExpressionUUID->"8bd858c9-f890-4033-91ee-40a4ddb71f88",
+ CellID->181121340],
+Cell[11198, 325, 174, 3, 21, "Subitem",ExpressionUUID->"7b538a21-b949-442d-b17b-a6deebd2be50",
+ CellID->1122033581],
+Cell[11375, 330, 176, 6, 24, "Text",ExpressionUUID->"a2b9255d-43eb-462c-90d2-6259ccbb619f",
+ CellID->964491560],
+Cell[11554, 338, 147, 1, 21, "Subitem",ExpressionUUID->"80aec63d-7539-458f-a790-55582963e0d3",
+ CellID->1003081364],
+Cell[11704, 341, 142, 1, 21, "Subitem",ExpressionUUID->"104a4461-18e9-4ebd-a5a1-4e34e8876fd5",
+ CellID->1041855798],
+Cell[11849, 344, 190, 4, 21, "Subitem",ExpressionUUID->"97c5a375-ae67-4d0d-8d5e-2500114a4646",
+ CellID->2036222995],
+Cell[12042, 350, 324, 5, 61, "Text",ExpressionUUID->"6ac1533f-dc3e-4156-853a-9ddd1f345cd2",
+ CellID->500478373]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12415, 361, 146, 1, 44, "Section",ExpressionUUID->"079a0f11-70ab-457c-9d0c-fb32cc3e3ad2",
+ CellID->1994053359],
+Cell[CellGroupData[{
+Cell[12586, 366, 104, 1, 40, "Subsection",ExpressionUUID->"5674009a-5bb0-4490-9de5-7ae217b5e25f",
+ CellID->425009631],
+Cell[12693, 369, 815, 12, 134, "Text",ExpressionUUID->"d299c5c1-546d-4e90-b650-1f0c3ec60d5c",
+ CellID->606258295]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13545, 386, 108, 1, 40, "Subsection",ExpressionUUID->"5a93cc1f-638a-4b76-8253-ea1df6102cfa",
+ CellID->1720742697],
+Cell[13656, 389, 180, 4, 24, "Text",ExpressionUUID->"85697366-99e2-43e5-be23-a0cd382a3c7f",
+ CellID->360234330],
+Cell[13839, 395, 359, 6, 55, "ItemParagraph",ExpressionUUID->"c7a592a2-9b74-466e-b477-35b704283b49",
+ CellID->701983417]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14235, 406, 110, 1, 40, "Subsection",ExpressionUUID->"2fd22626-afa2-400d-8cd9-e7a90687f8bc",
+ CellID->2107616548],
+Cell[14348, 409, 198, 4, 24, "Text",ExpressionUUID->"ed293aa5-ddc0-41b0-9d8e-5a874f660c00",
+ CellID->2116048618],
+Cell[14549, 415, 194, 6, 26, "ItemNumbered",ExpressionUUID->"98eabf01-1624-4c4a-9b74-5afd0d54d2d1",
+ CellID->2099928406],
+Cell[14746, 423, 189, 4, 21, "Subitem",ExpressionUUID->"85055c1c-2a8e-4bba-bcf4-61e95861a9fe",
+ CellID->1750464844],
+Cell[14938, 429, 206, 4, 21, "Subitem",ExpressionUUID->"e7dddec4-d767-43a3-96c0-6c61baba6347",
+ CellID->1684152855],
+Cell[15147, 435, 174, 6, 26, "ItemNumbered",ExpressionUUID->"c4715998-cf61-46d4-8afe-0b400ed05662",
+ CellID->1722566525],
+Cell[15324, 443, 195, 4, 21, "Subitem",ExpressionUUID->"628b9667-7aea-493b-88bd-296fdc029373",
+ CellID->948540468],
+Cell[15522, 449, 201, 4, 21, "Subitem",ExpressionUUID->"e63d5d96-942f-4c1b-9dc4-a35ddc361be8",
+ CellID->1348533995],
+Cell[15726, 455, 178, 6, 26, "ItemNumbered",ExpressionUUID->"71ccdac8-d816-41fb-9112-534283fef2da",
+ CellID->268443527],
+Cell[15907, 463, 339, 26, 21, "Subitem",ExpressionUUID->"f9206264-10a2-4f48-bad5-4148f060a38c",
+ CellID->2014699589],
+Cell[16249, 491, 170, 6, 21, "Subitem",ExpressionUUID->"4ca4dc09-6619-4439-a474-4aaf687f8dd6",
+ CellID->1681330074],
+Cell[16422, 499, 420, 32, 37, "Subsubitem",ExpressionUUID->"1f34066e-5ac8-4b5d-b3d1-2003f53fd768",
+ CellID->1524726492],
+Cell[16845, 533, 527, 46, 37, "Subsubitem",ExpressionUUID->"aa079827-73b0-4d77-b843-bfe3df70c96a",
+ CellID->155791393],
+Cell[17375, 581, 484, 38, 37, "Subsubitem",ExpressionUUID->"0044cb43-e77d-4380-8438-8282b031c8de",
+ CellID->603376458],
+Cell[17862, 621, 179, 6, 26, "ItemNumbered",ExpressionUUID->"981aaeef-5b8c-44cc-bfd6-612e23f4ad46",
+ CellID->530348472],
+Cell[18044, 629, 459, 38, 37, "Subitem",ExpressionUUID->"78de12c7-92fc-4874-ab89-1fd221f68095",
+ CellID->1509633854],
+Cell[18506, 669, 433, 36, 37, "Subitem",ExpressionUUID->"f88ba0bc-72f9-4c87-8be5-582d0b5a8b81",
+ CellID->2044378520],
+Cell[18942, 707, 188, 6, 26, "ItemNumbered",ExpressionUUID->"3fd22497-1405-479c-a21e-1eefbdf62e62",
+ CellID->131433640],
+Cell[19133, 715, 363, 28, 21, "Subitem",ExpressionUUID->"ae861edd-42e1-405c-9caf-21263bcb9031",
+ CellID->1391998364],
+Cell[19499, 745, 372, 28, 21, "Subitem",ExpressionUUID->"b07afd2f-55f9-4fd3-a344-b9c08ee475ea",
+ CellID->629653330],
+Cell[19874, 775, 389, 28, 37, "Subitem",ExpressionUUID->"2548cb80-930a-4697-91e3-f1a43bfdb3fc",
+ CellID->1931588541],
+Cell[20266, 805, 186, 6, 26, "ItemNumbered",ExpressionUUID->"fb9b3cf1-6088-469f-b2b8-91d58ae9a78c",
+ CellID->698316888],
+Cell[20455, 813, 341, 26, 21, "Subitem",ExpressionUUID->"67f6c3c4-8b35-4482-99d3-68dd6885adb0",
+ CellID->613805761],
+Cell[20799, 841, 385, 28, 21, "Subitem",ExpressionUUID->"59d3378b-54f2-46b9-b529-f07e06995d9a",
+ CellID->1869468586],
+Cell[21187, 871, 297, 20, 21, "Subitem",ExpressionUUID->"4767a5ea-6737-4678-8851-88af353be028",
+ CellID->325285645],
+Cell[21487, 893, 182, 6, 26, "ItemNumbered",ExpressionUUID->"f3d77f9b-17e2-4d98-8aca-9fc7ee724781",
+ CellID->1729953900],
+Cell[21672, 901, 424, 36, 21, "Subitem",ExpressionUUID->"ad98652c-3ca0-4ab6-84b2-5766f58d25a1",
+ CellID->554100567],
+Cell[22099, 939, 360, 26, 21, "Subitem",ExpressionUUID->"7e791830-ef03-44d2-b1f7-746961a09fbb",
+ CellID->1279136177],
+Cell[22462, 967, 342, 26, 21, "Subitem",ExpressionUUID->"93918998-c2bd-4323-9905-0f8daf29d7f7",
+ CellID->2130420369],
+Cell[22807, 995, 165, 6, 26, "ItemNumbered",ExpressionUUID->"8a33cb90-0670-4cdf-a450-0e2438c17a63",
+ CellID->980295352],
+Cell[22975, 1003, 288, 20, 21, "Subitem",ExpressionUUID->"6e2ed2ae-3492-42cd-bebc-bd437f74b0c5",
+ CellID->329441280],
+Cell[23266, 1025, 342, 26, 21, "Subitem",ExpressionUUID->"aeea4d99-1a2d-4b8b-ab6c-1a1424d31633",
+ CellID->706750994],
+Cell[23611, 1053, 350, 28, 21, "Subitem",ExpressionUUID->"78f58a58-7a93-437d-a14f-6daa51dd907b",
+ CellID->631904601],
+Cell[23964, 1083, 341, 26, 21, "Subitem",ExpressionUUID->"b1192e98-5ac9-44ba-af9d-9a9688306b14",
+ CellID->1113994592],
+Cell[24308, 1111, 169, 6, 26, "ItemNumbered",ExpressionUUID->"e7122670-4843-4eeb-863c-640691c338cc",
+ CellID->1144673198],
+Cell[24480, 1119, 349, 26, 21, "Subitem",ExpressionUUID->"45b0623a-1c20-412d-a399-870619d21bae",
+ CellID->1363928960],
+Cell[24832, 1147, 291, 20, 21, "Subitem",ExpressionUUID->"a285dc25-e6ad-4ba7-b9a2-2a97806c18dd",
+ CellID->1313582642],
+Cell[25126, 1169, 338, 24, 21, "Subitem",ExpressionUUID->"3f69dc19-3cbf-4fa5-bf9f-c0e89144515c",
+ CellID->1251572934],
+Cell[25467, 1195, 189, 8, 24, "Text",ExpressionUUID->"697e63ce-7a21-41e7-88ab-2de2f92380ed",
+ CellID->583979373],
+Cell[25659, 1205, 340, 26, 21, "Subitem",ExpressionUUID->"370215d7-c42f-4c9b-80e1-64a2ed3035de",
+ CellID->941055221],
+Cell[26002, 1233, 314, 22, 21, "Subitem",ExpressionUUID->"99d65929-b0f2-4c91-9582-e8e832bcd108",
+ CellID->98039192],
+Cell[26319, 1257, 390, 32, 21, "Subitem",ExpressionUUID->"7690f613-ed77-4542-8224-f297d9cb7ad2",
+ CellID->624742695],
+Cell[26712, 1291, 290, 5, 42, "Text",ExpressionUUID->"c623e2fb-0022-46a6-8d74-23b2f95486fe",
+ CellID->1002924682]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27051, 1302, 126, 1, 44, "Section",ExpressionUUID->"8fac7449-3822-4472-a033-d867fc2a333a",
+ CellID->555985071],
+Cell[CellGroupData[{
+Cell[27202, 1307, 104, 1, 40, "Subsection",ExpressionUUID->"e422f4c5-d80a-4997-8f62-3d2eef66d783",
+ CellID->739740200],
+Cell[27309, 1310, 747, 11, 116, "Text",ExpressionUUID->"956e9a7c-2f07-4bf5-91e3-cfa5585c89fc",
+ CellID->1030708917]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28093, 1326, 108, 1, 40, "Subsection",ExpressionUUID->"2399b8fd-c973-4fda-9aba-0cae2b534689",
+ CellID->1521671317],
+Cell[28204, 1329, 180, 4, 24, "Text",ExpressionUUID->"e82e3e2d-8d06-40ca-ae13-36bfb146e14c",
+ CellID->347072696],
+Cell[28387, 1335, 847, 13, 134, "ItemParagraph",ExpressionUUID->"c2c82ffe-c19f-488f-9f73-b29d7652425c",
+ CellID->685216420]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29271, 1353, 110, 1, 40, "Subsection",ExpressionUUID->"e6b2b6b9-f954-4ea2-95be-846631f3f00d",
+ CellID->1625055726],
+Cell[29384, 1356, 215, 5, 24, "Text",ExpressionUUID->"12b9c138-c60f-47ed-ac28-d117c845a6b7",
+ CellID->614564336],
+Cell[29602, 1363, 470, 7, 79, "Text",ExpressionUUID->"ea79bd0a-8426-40ab-8628-545cf85e47d8",
+ CellID->1733936729],
+Cell[30075, 1372, 182, 2, 26, "ItemNumbered",ExpressionUUID->"795f4850-4fe4-4878-8a93-fa95639e3d5c",
+ CellID->921514513],
+Cell[30260, 1376, 339, 26, 21, "Subitem",ExpressionUUID->"e2392a99-4f57-4447-95ce-6e6167232835",
+ CellID->242357827],
+Cell[30602, 1404, 464, 35, 37, "Subitem",ExpressionUUID->"7ba60e68-a101-435d-bcea-98e3ca9d6433",
+ CellID->1679003677],
+Cell[31069, 1441, 181, 2, 26, "ItemNumbered",ExpressionUUID->"16a0bb57-69b1-4abe-893f-b20036f50b8f",
+ CellID->1079677759],
+Cell[31253, 1445, 448, 33, 21, "Subitem",ExpressionUUID->"c88b29fa-dd9e-4a1f-a47b-41087ea81b65",
+ CellID->2054762010],
+Cell[31704, 1480, 426, 34, 37, "Subitem",ExpressionUUID->"4d52754b-85ec-46eb-84bc-507871a757f2",
+ CellID->700574663],
+Cell[32133, 1516, 168, 2, 26, "ItemNumbered",ExpressionUUID->"1368bd2c-6e2a-4efb-8a7c-b16d6316566b",
+ CellID->2053008187],
+Cell[32304, 1520, 291, 20, 21, "Subitem",ExpressionUUID->"b9235fdd-356b-4fd4-b7d4-679b0c89eb51",
+ CellID->1288842560],
+Cell[32598, 1542, 393, 34, 21, "Subitem",ExpressionUUID->"c6f018dc-55a9-456d-a314-ce9f63302d94",
+ CellID->2056842278],
+Cell[32994, 1578, 222, 3, 26, "ItemNumbered",ExpressionUUID->"00600bd8-305e-4204-a67d-ee99db744430",
+ CellID->1303900587],
+Cell[33219, 1583, 481, 39, 37, "Subitem",ExpressionUUID->"7ac356c7-d069-4440-87e0-0a54b130b94d",
+ CellID->1734031721],
+Cell[33703, 1624, 488, 42, 37, "Subitem",ExpressionUUID->"bc5b2e55-3faf-4262-ab32-e578b4a31b0d",
+ CellID->370561410],
+Cell[34194, 1668, 174, 2, 26, "ItemNumbered",ExpressionUUID->"c1b10346-5623-4724-8344-08067f8921f1",
+ CellID->323041570],
+Cell[34371, 1672, 371, 30, 21, "Subitem",ExpressionUUID->"36fa931f-6d0a-4ee3-a4f0-8bae1e1188d3",
+ CellID->521007374],
+Cell[34745, 1704, 364, 28, 21, "Subitem",ExpressionUUID->"822ad10b-0085-4dbf-8a90-9b2a7680eac3",
+ CellID->1280105999],
+Cell[35112, 1734, 197, 3, 26, "ItemNumbered",ExpressionUUID->"308f8cd7-6753-41e1-9d53-b119fb568b34",
+ CellID->1250349547],
+Cell[35312, 1739, 415, 34, 21, "Subitem",ExpressionUUID->"48d343a5-906e-435c-a1da-de57b490f720",
+ CellID->1497350534],
+Cell[35730, 1775, 348, 26, 21, "Subitem",ExpressionUUID->"7b557d76-6960-4e7b-bfe4-405a60e13bf8",
+ CellID->1757049392],
+Cell[36081, 1803, 180, 2, 26, "ItemNumbered",ExpressionUUID->"51f96075-2465-4d1f-87b9-d0e059c9a359",
+ CellID->681501447],
+Cell[36264, 1807, 450, 38, 37, "Subitem",ExpressionUUID->"433861b0-b766-411a-8ba1-2c0780c68c81",
+ CellID->1464530278],
+Cell[36717, 1847, 541, 48, 37, "Subitem",ExpressionUUID->"0978b271-9129-47bd-9d5a-c54adc71aced",
+ CellID->2050304079],
+Cell[37261, 1897, 177, 2, 26, "ItemNumbered",ExpressionUUID->"591ec7c7-20d1-4edd-808f-35a3d844a007",
+ CellID->938055991],
+Cell[37441, 1901, 505, 44, 37, "Subitem",ExpressionUUID->"76c2926a-a3c3-41e3-a827-142db3bf7764",
+ CellID->1229588110],
+Cell[37949, 1947, 507, 46, 37, "Subitem",ExpressionUUID->"28c48fa9-a1e3-4d79-b902-42cbe291a82f",
+ CellID->452229689],
+Cell[38459, 1995, 166, 2, 26, "ItemNumbered",ExpressionUUID->"7df8a0fc-03c7-4a5d-ab87-e05db79e7ca4",
+ CellID->679756290],
+Cell[38628, 1999, 533, 50, 37, "Subitem",ExpressionUUID->"078126e9-1baf-4cc1-8182-ea548f015e4c",
+ CellID->50963990],
+Cell[39164, 2051, 502, 44, 37, "Subitem",ExpressionUUID->"3d6ca6c2-ed99-4f6f-94bd-86cdf936b53a",
+ CellID->1853288424],
+Cell[39669, 2097, 184, 6, 24, "Text",ExpressionUUID->"bbf8df03-8579-4a01-9f85-6a5e43c9e2ae",
+ CellID->1115726080],
+Cell[39856, 2105, 427, 34, 37, "Subitem",ExpressionUUID->"9a744f7a-bddf-43ac-bc68-d71e3f67b7f4",
+ CellID->181020956],
+Cell[40286, 2141, 393, 30, 21, "Subitem",ExpressionUUID->"a6109da2-09d1-45dd-8841-748c73d38a46",
+ CellID->1582363340],
+Cell[40682, 2173, 192, 6, 24, "Text",ExpressionUUID->"5dafc20c-2be7-407e-976c-62e4f387f5f5",
+ CellID->343170932],
+Cell[40877, 2181, 370, 26, 21, "Subitem",ExpressionUUID->"da2b1d85-e905-4fa8-9a36-f5abd5b34f44",
+ CellID->1680261929],
+Cell[41250, 2209, 444, 38, 37, "Subitem",ExpressionUUID->"19c987d0-fa02-4e18-a0de-17ade70ee44c",
+ CellID->752282653],
+Cell[41697, 2249, 195, 6, 24, "Text",ExpressionUUID->"71eb196f-c94a-45fc-a79a-75d34f77af9d",
+ CellID->1378319082],
+Cell[41895, 2257, 450, 38, 37, "Subitem",ExpressionUUID->"82c61c4f-37a4-4004-9d43-40ae3b9b04e1",
+ CellID->502710985],
+Cell[42348, 2297, 426, 34, 37, "Subitem",ExpressionUUID->"b31684e7-5751-42b0-9626-55bf62e98c0a",
+ CellID->862857597],
+Cell[42777, 2333, 188, 6, 24, "Text",ExpressionUUID->"6c9a0862-61b6-412f-8cc4-232bcabf24ab",
+ CellID->90564588],
+Cell[42968, 2341, 473, 42, 37, "Subitem",ExpressionUUID->"f364e615-4d9f-42ae-a698-0926f5392bb2",
+ CellID->1700608440],
+Cell[43444, 2385, 364, 26, 21, "Subitem",ExpressionUUID->"5892a0f8-27df-4fa3-b477-0a2be804c655",
+ CellID->1266193157],
+Cell[43811, 2413, 164, 2, 24, "Text",ExpressionUUID->"40bf5c8c-871b-4a2c-9efd-cf93a9ed70f5",
+ CellID->1492931576],
+Cell[43978, 2417, 223, 4, 42, "Text",ExpressionUUID->"bcebc59b-cb08-4fb3-a3a0-4ebcf64cf9fb",
+ CellID->502066284],
+Cell[44204, 2423, 473, 40, 37, "Item",ExpressionUUID->"7358bf4f-ef2f-46aa-99e0-f84385f6d987",
+ CellID->764786125],
+Cell[44680, 2465, 484, 42, 37, "Item",ExpressionUUID->"ecaa0f88-7f98-4a4c-b614-6daf8f0ec981",
+ CellID->1070775580],
+Cell[45167, 2509, 606, 58, 37, "Item",ExpressionUUID->"b2e4ffbd-ee86-41e7-a45d-b0160dc6b1da",
+ CellID->612211200],
+Cell[45776, 2569, 471, 40, 37, "Item",ExpressionUUID->"c0a2b2d9-69ec-4dd9-ad47-a0e450b4257d",
+ CellID->839485623],
+Cell[46250, 2611, 122, 2, 24, "Text",ExpressionUUID->"a66da3a4-eb30-4f91-8963-ab0d44bec217",
+ CellID->267304971],
+Cell[46375, 2615, 650, 10, 116, "Text",ExpressionUUID->"ffd781e4-f7a3-48a6-a2e0-d99a1118c6c8",
+ CellID->58858073]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47074, 2631, 192, 2, 73, "TutorialMoreAboutSection",ExpressionUUID->"6c507cf5-3138-459a-a5df-c8c364a35979",
+ CellID->1159329753],
+Cell[47269, 2635, 315, 6, 23, "TutorialMoreAbout",ExpressionUUID->"07976028-8ddd-40d2-b4b7-8e67b0be9ec5",
+ CellID->824948630]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47621, 2646, 128, 1, 73, "RelatedTutorialsSection",ExpressionUUID->"b157d2c3-7279-4246-8d69-f54b4bebd455",
+ CellID->940991360],
+Cell[47752, 2649, 108, 1, 23, "RelatedTutorials",ExpressionUUID->"2db76199-d79d-4ff9-a511-c744fb607d9e",
+ CellID->1172211012]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47909, 2656, 111, 1, 71, "MetadataSection",ExpressionUUID->"6c1ec1ec-8aa5-4274-9a72-dae74b5825a8",
+ CellID->1704321082],
+Cell[48023, 2659, 546, 13, 25, "History",ExpressionUUID->"5d2afd15-1fc9-4e9a-a765-c086c9bbac16",
+ CellID->1387541488],
+Cell[CellGroupData[{
+Cell[48594, 2676, 122, 1, 20, "CategorizationSection",ExpressionUUID->"9dc83990-6475-4944-ae7f-1ed7dc4ababc",
+ CellID->884866043],
+Cell[48719, 2679, 137, 2, 70, "Categorization",ExpressionUUID->"1fc5c71e-fbd1-4d70-ba4b-798d04c9ef50",
+ CellID->619329226],
+Cell[48859, 2683, 172, 2, 70, "Categorization",ExpressionUUID->"850df220-d159-41dc-9bfd-afbf2b0a8431",
+ CellID->213064373],
+Cell[49034, 2687, 170, 2, 70, "Categorization",ExpressionUUID->"ffc85d99-c011-49b9-8889-ee0da4388175",
+ CellID->1117677462],
+Cell[49207, 2691, 219, 5, 70, "Categorization",ExpressionUUID->"8ba8ffc4-56ac-4283-a246-0f74f6bf92f1",
+ CellID->765643525]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[49463, 2701, 111, 1, 20, "KeywordsSection",ExpressionUUID->"8706947d-c7f0-4dd6-83bf-f5f98c13f419",
+ CellID->1656366224],
+Cell[49577, 2704, 188, 2, 19, "Keywords",ExpressionUUID->"7c4670fc-6ea0-4267-b9db-0be498375ba4",
+ CellID->716610707],
+Cell[49768, 2708, 165, 2, 19, "Keywords",ExpressionUUID->"ef1b333e-ff9a-4baf-aa90-bbc9630843e7",
+ CellID->1722537815],
+Cell[49936, 2712, 185, 2, 19, "Keywords",ExpressionUUID->"d923a6f4-808c-4683-b296-bac1b41c7326",
+ CellID->841312414],
+Cell[50124, 2716, 186, 2, 19, "Keywords",ExpressionUUID->"b72b984f-b425-4785-a76d-164123635b8c",
+ CellID->1572010512],
+Cell[50313, 2720, 177, 2, 19, "Keywords",ExpressionUUID->"e761822f-03cd-4897-ba5c-fe8b5cb490b6",
+ CellID->1687556558],
+Cell[50493, 2724, 183, 2, 19, "Keywords",ExpressionUUID->"b6dddff8-f1d0-4be5-a748-a2379a658c1b",
+ CellID->135104388],
+Cell[50679, 2728, 182, 2, 19, "Keywords",ExpressionUUID->"f5866b72-1e33-4878-8866-bd1300d7e7f5",
+ CellID->893793632],
+Cell[50864, 2732, 163, 2, 19, "Keywords",ExpressionUUID->"4be08819-76f2-4707-b3b1-4fc412618ae9",
+ CellID->435900177]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
